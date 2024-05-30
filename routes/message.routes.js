@@ -22,7 +22,7 @@ router.post("/", (req, res, next) => {
             <hr>
             <p>"${message.message}"<p/>
             <hr>
-            <p><b>Email:</b>${message.email}<p/>
+            <p><b>Email: </b>${message.email}<p/>
             <p><b>Phone Number: </b>${message.number}<p/>`
         });
 
