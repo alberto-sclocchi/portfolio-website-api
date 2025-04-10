@@ -6,7 +6,7 @@ router.post("/", (req, res, next) => {
     console.log(req.body);
 
     if(req.body.firstName === "" || req.body.lastName === ""  || req.body.email  === "" ||req.body.number  === "" ||req.body.subject === ""  ||req.body.message === "" ){
-        res.json({message: "Please fill in the required info before proceeding."});
+        res.json({message: "Please fill in the required info before proceeding.", success: false});
         return;
     }
 
@@ -29,7 +29,7 @@ router.post("/", (req, res, next) => {
         res.json({success: true})
     })
     .catch((err) => {
-        res.json({success: false, err: err})
+        res.json({success: false, message: err})
     })
 });
 
