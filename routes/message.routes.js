@@ -26,7 +26,7 @@ router.post("/", (req, res, next) => {
             <p><b>Phone Number: </b>${message.number}<p/>`
         });
 
-        res.json({success: true, messsage: "Thank you for the message. I will soon get back to you."})
+        res.json({success: true, message: `Thanks ${message.firstName} for the message. I will soon get back to you.`})
     })
     .catch((err) => {
         res.json({success: false, message: err})
