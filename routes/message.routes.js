@@ -14,7 +14,7 @@ router.post("/", (req, res, next) => {
     .then((message) => {
 
         transporter.sendMail({
-            from: "albe.sclocchi@mgail.com",
+            from: "albe.sclocchi@gmail.com",
             to: "scloks75tv@gmail.com",
             subject: `${message.firstName} ${message.lastName} | ${message.subject}`,
             text: "Thank you for signing up", 
@@ -26,7 +26,7 @@ router.post("/", (req, res, next) => {
             <p><b>Phone Number: </b>${message.number}<p/>`
         });
 
-        res.json({success: true})
+        res.json({success: true, messsage: "Thank you for the message. I will soon get back to you."})
     })
     .catch((err) => {
         res.json({success: false, message: err})
